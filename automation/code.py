@@ -58,24 +58,28 @@ phone_list = ''
 for i in SORTED_PHONE_NUMS:
     phone_list += i + '\n'
 
+# // write phone numbers to the phone_numbers.txt file //
 with open('assets/phone_numbers.txt', 'w+') as phone_file:
     phone_file.write(phone_list)
 
 ### ------ FIND EMAILS ------ ###
-rule = r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+"
-emails = re.findall(rule, contents)
 
-# emails = re.findall(r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", contents)
+emails = re.findall(r"[a-z0-9\.\-+_]+@[a-z0-9\.\-+_]+\.[a-z]+", contents)
+
+# // sort emails in ascending order //
 ascending_emails = sorted(emails)
-EMAIL_DUPS_REMOVED = set(ascending_emails) # emails with duplicates removed in ascending order
-# print("Dups removed, ascending order, ", len(DUPS_REMOVED))
+
+# // remove duplicates //
+email_dups_removed = []
+for i in ascending_emails:
+    if i not in email_dups_removed:
+        email_dups_removed.append(i)
+# print("Ascending emails: ", len(ascending_emails), " Dups removed: ", len(email_dups_removed))
 
 email_list = ''
-for i in EMAIL_DUPS_REMOVED:
+for i in email_dups_removed:
     email_list += i + '\n'
 
+# // write emails to the email.txt file //
 with open('assets/emails.txt', 'w+') as email_file:
     email_file.write(email_list)
-
-
-

@@ -2,7 +2,7 @@
 
 *Author*: Kassie Bradshaw
 
-[Link to Pull Request](tbd)
+[Link to Pull Request](https://github.com/kassiebradshaw/automation/pull/1)
 
 [Link to My Code](automation/code.py)
 
@@ -18,17 +18,17 @@ Your job is to find the needles in the haystack.
 
 ## Feature Tasks & Requirements
 
-* [ ] Given a document `potential-contacts` - find and collect all the email addresses and phone numbers
-  * [ ] Phone numbers may be in various formats
+* [x] Given a document `potential-contacts` - find and collect all the email addresses and phone numbers
+  * [x] Phone numbers may be in various formats
     * (xxx) yyy-zzzz
     * xxx-yyy-zzzz
     * yyy-zzzz
-  * [ ] Phone numbers with missing area code should presume 206
-  * [ ] Phone numbers should be stored in **xxx-yyy-zzzz** format
+  * [x] Phone numbers with missing area code should presume 206
+  * [x] Phone numbers should be stored in **xxx-yyy-zzzz** format
 
-* [ ] Once emails and phone numbers are found they should be stored in two separate documents.
-* [ ] The information should be sorted in ascending order.
-* [ ] Duplicate entries are not allowed
+* [x] Once emails and phone numbers are found they should be stored in two separate documents.
+* [x] The information should be sorted in ascending order.
+* [x] Duplicate entries are not allowed
 
 phone_numbers.txt
 
